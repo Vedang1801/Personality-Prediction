@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import time
 
 # Define the file paths
-MODEL_FILE_PATH = 'Models/model_cat.pkl'
+MODEL_FILE_PATH = 'Models/model_xgb.pkl'
 
 st.set_page_config(page_title="Personality-Prediction",layout="centered",  page_icon="🧠")
 # Define the Streamlit app
