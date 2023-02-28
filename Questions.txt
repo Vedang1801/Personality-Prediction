@@ -1,0 +1,47 @@
+Introversion/Extroversion
+Extrovert
+1. I enjoy being in large groups of people.		
+3. I feel energized after interacting with many people.	
+4. I find it easy to approach and talk to strangers.	
+5. I like being the center of attention in social situations.
+Introvert
+2. I prefer spending time alone over being with others.	
+6. I feel drained after spending a lot of time around people and need alone time to recharge.	
+7. I prefer to work independently and avoid group projects if possible.	
+8. I prefer to listen and observe in social situations, rather than being the one to initiate conversation.
+
+Sensing/Intuition
+Sensing		
+10. I prefer to focus on the facts and concrete information when making decisions.		
+12. I am more concerned with the present moment and practical realities than future possibilities.
+13. I rely on past experiences to guide my decisions and actions.	
+14. I often see patterns and connections in things that others don't.
+Intuition 	
+9. I trust my instincts and rely on my gut feeling when making decisions.
+11. I am highly imaginative and enjoy exploring new ideas and possibilities.	
+15. I am more interested in the theoretical and abstract aspects of a situation.	
+16. I like to have a detailed plan before taking action.
+	
+Thinking/Feeling
+Thinking	
+18. We should make decisions based on logical reasoning and facts.		
+20. The best decision is the one that maximizes efficiency and productivity.
+22. Objectivity should be the primary consideration when making decisions.
+24. The most important factor in decision making is the analysis of available data.
+Feeling	
+17. I believe that we should prioritize our personal values in decision making.
+19. I think we should consider how our actions will affect others before making a decision.
+21. I feel that relationships and emotional connections should play a role in decision making.		
+23. I believe that intuition should guide our decisions in certain situations.	
+	
+Judging/Perceiving
+Judging
+25. I like to have a clear plan and stick to it.		
+27. I enjoy having a structured and organized approach to tasks
+29. I feel most comfortable when I know what to expect in a situation.
+31. I believe in making decisions and sticking to them.	
+Perceiving
+26. I prefer to stay flexible and adapt to changing situations.
+28. I like to keep my options open and explore different possibilities.	
+30. I enjoy going with the flow and being spontaneous.		
+32. I think it's important to remain open to new ideas and possibilities.		

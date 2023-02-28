@@ -1,0 +1,23 @@
+Question: "How do you prefer to spend your free time?"
+
+Introvert answer: "I prefer to spend my free time alone, reading a book or watching a movie. I find it relaxing and rejuvenating to be in my own space and not have to socialize. I recharge my batteries by being alone."
+
+Extrovert answer: "I prefer to spend my free time with others, going out with friends or trying new activities. I find it energizing and fun to be around people and have new experiences. I recharge my batteries by being with others."
+
+Question: "How do you prefer to approach problem-solving?"
+
+Sensing answer: "I prefer to approach problem-solving by using my practical knowledge and experience. I like to focus on the concrete facts and details and come up with a solution that is based on tangible evidence. I find it more satisfying when I can find a solution that is tried and true."
+
+Intuitive(N) answer: "I prefer to approach problem-solving by using my imagination and creativity. I like to focus on the big picture and the possibilities, and come up with a solution that is unique and innovative. I find it more satisfying when I can find a solution that is novel and unexpected."
+
+Question: "When making important decisions, how do you prioritize your values and beliefs?"
+
+Thinking answer: "When making important decisions, I prioritize logic and objectivity. I try to consider the consequences of my actions objectively and make decisions based on what is fair and just. I find it more important to maintain a logical and consistent decision-making process, rather than basing my decisions on my emotions or personal values."
+
+Feeling answer: "When making important decisions, I prioritize my personal values and beliefs. I try to consider the impact of my actions on the people involved and make decisions based on what is in line with my heart. I find it more important to maintain a consistent set of values and beliefs, rather than basing my decisions on pure logic."
+
+Question: "How do you typically approach your daily schedule and tasks?"
+
+Judging answer: "I prefer to have a structured and organized approach to my daily tasks. I like to have a plan for my day and follow it as closely as possible. I feel more comfortable when I have completed my tasks and my schedule is in order. I find that having a structured routine helps me to be more productive and achieve my goals."
+
+Perceiving answer: "I prefer a flexible and spontaneous approach to my daily tasks. I like to leave room for surprises and unexpected opportunities. I feel more comfortable when I have the freedom to change my plans if something more interesting or exciting comes up. I find that having a flexible and spontaneous approach helps me to be more adaptable and go with the flow."
