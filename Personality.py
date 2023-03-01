@@ -135,6 +135,26 @@ def app():
             st.success("Your personality type is {}".format(result), icon='✅')
         except Exception as e:
             st.error('An error occurred: {}'.format(e))
+            
+        mbti_types = {
+    "I" : "  INTROVERTED  ",
+    "E" : "  EXTRAVERTED  ",
+    "S" : "  SENSING  ",
+    "N" : "  INTUTION  ",
+    "T" : "  THINKING  ",
+    "F" : "  FEELING  ",
+    "J" : "  JUDGING  ",
+    "P" : "  PERCIEVING  ",
+
+}
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
+        st.caption("Additional Information")
+        with st.expander("Click here to see the MBTI types and their full forms"):
+            for mbti_type, full_form in mbti_types.items():
+                st.write(f"{mbti_type}: {full_form}")
 
 def collect_responses(questions, options, text_questions):
     st.subheader("MCQ Questions")
