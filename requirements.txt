@@ -3,3 +3,4 @@ scikit_learn==1.2.1
 streamlit==1.19.0
 catboost==1.1.1
 xgboost==1.7.3
+nltk==3.8.1
