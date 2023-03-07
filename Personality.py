@@ -1,5 +1,6 @@
 import re
 import time
+import nltk
 import nltk_download_utils
 import pickle
 import numpy as np
