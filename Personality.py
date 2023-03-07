@@ -1,8 +1,11 @@
-import streamlit as st
-import numpy as np
-import pickle
-from sklearn.feature_extraction.text import TfidfVectorizer
+import re
 import time
+import nltk
+import pickle
+import numpy as np
+import streamlit as st
+from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Define the file paths
 MODEL_FILE_PATH = 'Models/model_cat.pkl'
@@ -15,7 +18,7 @@ def app():
     # Add a title to the app
     st.title("Personality Prediction Questionnaire")
     st.write("-----------------------------------------------------")
-    
+
     # Define the questions and options
     questions = [
         "Question 1: I enjoy being in large groups of people.",
@@ -72,7 +75,6 @@ def app():
     st.write("-----------------------------------------------------")
     st.header("Personality Type Predictor")
     st.caption("Click On The Predict Button to know your Personality")
-    
 
     # Make a prediction and display the result
     st.write(" ")
@@ -135,18 +137,18 @@ def app():
             st.success("Your personality type is {}".format(result), icon='✅')
         except Exception as e:
             st.error('An error occurred: {}'.format(e))
-            
-        mbti_types = {
-    "I" : "  INTROVERTED  ",
-    "E" : "  EXTRAVERTED  ",
-    "S" : "  SENSING  ",
-    "N" : "  INTUTION  ",
-    "T" : "  THINKING  ",
-    "F" : "  FEELING  ",
-    "J" : "  JUDGING  ",
-    "P" : "  PERCIEVING  ",
 
-}
+        # Display MBTI Accordian
+        mbti_types = {
+            "I": "  INTROVERSION  ",
+            "E": "  EXTRAVERSION  ",
+            "S": "  SENSING  ",
+            "N": "  INTUTION  ",
+            "T": "  THINKING  ",
+            "F": "  FEELING  ",
+            "J": "  JUDGING  ",
+            "P": "  PERCIEVING  "
+        }
         st.write(" ")
         st.write(" ")
         st.write(" ")
@@ -155,6 +157,7 @@ def app():
         with st.expander("Click here to see the MBTI types and their full forms"):
             for mbti_type, full_form in mbti_types.items():
                 st.write(f"{mbti_type}: {full_form}")
+
 
 def collect_responses(questions, options, text_questions):
     st.subheader("MCQ Questions")
@@ -166,7 +169,6 @@ def collect_responses(questions, options, text_questions):
         index_of_response = options.index(response) + 1
         responses.append(index_of_response)
 
-    
     st.write(" ")
     st.write("-----------------------------------------------------")
     st.header("Textual Questions: ")
@@ -178,8 +180,31 @@ def collect_responses(questions, options, text_questions):
             text_questions[i]['question'], text_questions[i]['options'])
         text_responses.append(response)
 
-    # Combine the textual responses into a single string
-    text_response_string = ' '.join(text_responses)
+    # Collect input for the fifth textual question using text_input
+    text_response_string = ''
+    
+    text_response = st.text_input('Describe a challenging situation you have faced in the past and how you overcame it.',max_chars=250,placeholder="Enter Answer Here")
+    if text_response:
+        text_response_string = text_response
+
+    # Combine all the textual responses into a single string
+    text_response_string = ' '.join(text_responses) + ' ' + text_response_string
+
+    # Remove URLs using regular expressions
+    text_response_string = re.sub(r"http\S+", "", text_response_string)
+
+    # Remove special characters using regular expressions
+    text_response_string = re.sub(r"[^a-zA-Z0-9]+", " ", text_response_string)
+
+    # Tokenize the text_response_string into words
+    words = nltk.word_tokenize(text_response_string)
+
+    # Remove stop words using NLTK's English stop words list
+    stop_words = set(stopwords.words("english"))
+    words = [word for word in words if word.lower() not in stop_words]
+
+    # Join the words back into a string
+    text_response_string = " ".join(words)
 
     # Initialize the TF-IDF Vectorizer with 32 features
     tfidf = TfidfVectorizer(max_features=32)
