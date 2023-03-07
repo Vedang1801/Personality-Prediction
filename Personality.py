@@ -1,7 +1,6 @@
 import re
 import time
-import nltk
-import import nltk_download_utils
+import nltk_download_utils
 import pickle
 import numpy as np
 import streamlit as st
