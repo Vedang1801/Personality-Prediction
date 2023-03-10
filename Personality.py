@@ -184,7 +184,7 @@ def collect_responses(questions, options, text_questions):
     # Collect input for the fifth textual question using text_input
     text_response_string = ''
     
-    text_response = st.text_input('Describe a challenging situation you have faced in the past and how you overcame it.',max_chars=250,placeholder="Enter Answer Here")
+    text_response = st.text_input('Describe a challenging situation you have faced in the past and how you overcame it.',max_chars=500,placeholder="Enter Answer Here")
     if text_response:
         text_response_string = text_response
 
