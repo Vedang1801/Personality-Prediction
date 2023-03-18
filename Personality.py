@@ -136,29 +136,31 @@ def app():
 
         # Display the prediction to the user
             st.success("Your personality type is {}".format(result), icon='✅')
+        # Display MBTI Accordian
+            mbti_types = {
+    "I" : "  INTROVERSION  ",
+    "E" : "  EXTROVERSION  ",
+    "S" : "  SENSING  ",
+    "N" : "  INTUTION  ",
+    "T" : "  THINKING  ",
+    "F" : "  FEELING  ",
+    "J" : "  JUDGING  ",
+    "P" : "  PERCIEVING  ",
+
+    }
+            st.write(" ")
+            st.write(" ")
+            st.write(" ")
+            st.write(" ")
+            st.caption("Additional Information")
+            with st.expander("Click here to see the MBTI types and their full forms"):
+                for mbti_type, full_form in mbti_types.items():
+                    st.write(f"{mbti_type}: {full_form}")
+            
+        except Exception as e:
+            st.error('Please provide a response to the textual question.')
         except Exception as e:
             st.error('An error occurred: {}'.format(e))
-
-        # Display MBTI Accordian
-        mbti_types = {
-            "I": "  INTROVERSION  ",
-            "E": "  EXTRAVERSION  ",
-            "S": "  SENSING  ",
-            "N": "  INTUTION  ",
-            "T": "  THINKING  ",
-            "F": "  FEELING  ",
-            "J": "  JUDGING  ",
-            "P": "  PERCIEVING  "
-        }
-        st.write(" ")
-        st.write(" ")
-        st.write(" ")
-        st.write(" ")
-        st.caption("Additional Information")
-        with st.expander("Click here to see the MBTI types and their full forms"):
-            for mbti_type, full_form in mbti_types.items():
-                st.write(f"{mbti_type}: {full_form}")
-
 
 def collect_responses(questions, options, text_questions):
     st.subheader("MCQ Questions")
