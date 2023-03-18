@@ -159,8 +159,7 @@ def app():
             
         except Exception as e:
             st.error('Please provide a response to the textual question.')
-        except Exception as e:
-            st.error('An error occurred: {}'.format(e))
+
 
 def collect_responses(questions, options, text_questions):
     st.subheader("MCQ Questions")
